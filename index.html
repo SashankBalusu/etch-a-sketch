@@ -1,0 +1,31 @@
+<style>
+#container {
+    display:grid;
+    grid-template-columns: repeat(16, 20px);
+    grid-template-rows: repeat(16, 20px);
+}
+.gridpiece {
+    background:blueviolet;
+}
+button {
+    margin-top : 10px;
+}
+
+</style>
+
+<!DOCTYPE html>
+
+<html>
+    <body>
+        <div id = "container">
+        </div>
+        <button>Reset</button>
+        <form>
+            <p>Enter the amount of squares you want in your grid (1 - 100):</p>
+            <input type = "text" id = "text"></input>
+            <input type = "submit" id = "submit"></input>
+        </form>
+        
+        <script src = "script.js"></script>    
+    </body>
+</html>
