@@ -1,17 +1,57 @@
-<style>
-#container {
-    display:grid;
-    grid-template-columns: repeat(16, 20px);
-    grid-template-rows: repeat(16, 20px);
-}
-.gridpiece {
-    background:blueviolet;
-}
-button {
-    margin-top : 10px;
-}
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,500" rel="stylesheet">
+    <style>
 
-</style>
+        body {
+            background: linear-gradient(35deg, #CCFFFF, #FFCCCC);
+        }
+        
+        #container {
+            display:grid;
+            justify-content: center;
+            
+            
+        }
+        .gridpiece {
+            background:transparent;
+            
+        }
+        button {
+            font-family: 'Quicksand', sans-serif;
+            position:absolute;
+            left:17%;
+            top:0;
+            margin-top:10px;
+            width:100px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 6px;
+            
+        }
+        button:hover {
+            background: lightgray;
+        }
+        #submit {
+            top:30%;
+        }
+        #reset {
+            top:70%
+        }
+        #rainbowpen {
+            top:50%
+        
+        }
+        #pen {
+            top:40%;
+        }
+        #eraser {
+            top:60%;
+        }
+        
+        
+        </style>
+</head>
+
 
 <!DOCTYPE html>
 
@@ -19,11 +59,15 @@ button {
     <body>
         <div id = "container">
         </div>
-        <button>Reset</button>
+        <button id  = "reset">Reset</button>
+        <button id = "pen">Pen</button>
+        <button id = "eraser">Eraser</button>
+        <button id = "rainbowpen">Rainbow Pen</button>
+
         <form>
-            <p>Enter the amount of squares you want in your grid (1 - 100):</p>
-            <input type = "text" id = "text"></input>
-            <input type = "submit" id = "submit"></input>
+            <!--<p>Enter the amount of squares you want in your grid (1 - 100):</p>
+            <input type = "text" id = "text"></input>-->
+            <button type = "submit" id = "submit" onclick="changeSquare(Number(prompt('Choose your grid height and width (1-100):')))">Choose Size</button>
         </form>
         
         <script src = "script.js"></script>    
